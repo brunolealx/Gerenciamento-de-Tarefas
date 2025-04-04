@@ -47,14 +47,15 @@ export function App() {
     );
     setTodos(newTodos);
   };
-  
+
+  const [search, setSearch] = useState("");
 
   return (
     <div className="app">
       <h1>Lista de Tarefas</h1>
-      <Search />
+      <Search search={search} setSearch={setSearch} />
       <div className="todo-list">
-        {todos.map((todo) => (
+        {todos.filter((todo)=>todo.text.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((todo) => (
           <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo} />
 
         ))}
