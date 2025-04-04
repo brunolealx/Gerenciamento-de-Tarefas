@@ -1,11 +1,11 @@
-function Filter() {
+function Filter({filter,setFilter}) {
   return (
     <div className="filter">
         <h2>Filtrar:</h2>
       <div className="filter-options">
         <div>
             <p>Status:</p>
-            <select>
+            <select value = {filter} onChange={(e) => setFilter(e.target.value)}>
                 <option value="all">Todos</option>
                 <option value="completed">Completas</option>
                 <option value="not-completed">Incompletos</option>
@@ -13,8 +13,8 @@ function Filter() {
         </div>
         <div>
             <p>Ordem Alfabética:</p>
-            <button>Acendente</button>
-            <button>Descendente</button>
+            <button>Asc</button>
+            <button>Desc</button>
         </div>
       </div>
     </div>
