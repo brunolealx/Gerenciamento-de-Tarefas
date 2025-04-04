@@ -12,7 +12,7 @@ body {
 .app{
   max-width: 600px;
   margin: 0 auto 300px;
-  background-color: #efefef;
+  background-color: #eee9e9;
   padding: 20px 30px;
   border-radius: 10px;
 }
@@ -36,14 +36,44 @@ button{
   background-color: #333974;
   color: #FFF;
   padding: 5px 10px;
+
   border: none;
   border-radius: 3px;
   cursor: pointer;
   opacity: 0.8; 
   transition: 0.3s;
+  
 }
 button:hover{
   opacity: 1;
+}
+
+.todo-list{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+.todo {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; /* Garante que os itens fiquem em lados opostos */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+.todo .content {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+.todo div {
+  display: flex;
+  gap: 10px; /* Adiciona espaçamento entre os botões */
+  justify-content: flex-end; /* Alinha os botões à direita */
+  margin-left: auto; /* Empurra os botões para o canto direito */
 }
 .complete{
   background-color: #5cb85c;
