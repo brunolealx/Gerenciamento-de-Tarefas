@@ -30,6 +30,12 @@ export function App() {
           <div className="todo" key={todo.id}>
             <div className="content">
               <p>{todo.text}</p>
+              <p className="category">({todo.category}
+              </p>
+              <div>
+                <button>Completar</button>
+                <button>x</button>
+              </div>
             </div>
           </div>
         ))}
