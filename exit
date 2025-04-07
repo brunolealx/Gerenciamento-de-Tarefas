@@ -1,0 +1,16 @@
+Projeto Todo List com filtro e ordenação em React
+Integra componentes Search e Filter no App e aplica filtros de busca e status nas tarefas
+Adiciona estilos para o componente de filtro por categoria
+Adiciona funcionalidade de filtro por categoria
+Corrige funcionalidade de busca conectando input ao estado via setSearch
+Adiciona componente de busca para filtrar tarefas por texto
+Adiciona botão de completar tarefa na lista de tarefas
+Corrige alinhamento dos botões no layout das tarefas
+Refatora TodoForm: Adiciona validação de campos, integração com addTodo e melhorias no formulário
+Implementa lista de tarefas com componentes separados, estilizações e funcionalidades básicas
+Adiciona estilizações: cores dos botões e ajustes de espaçamento
+Refatora App: extrai componente Todo para um arquivo separado
+Atualizando estilos dos componentes no CSS para ficar com estilo mais agradavel, também adicionei uma nova imagem de fundo
+Atualiza layout e lógica do componente App para exibir lista de tarefas
+Atualiza componente App para renderizar lista de tarefas
+Primeiro commit do projeto TODO
