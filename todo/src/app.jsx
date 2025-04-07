@@ -27,8 +27,8 @@ export function App() {
     },
   ]);
 
-  
-  
+
+
 
   const addTodo = (text, category) => {
     const newTodo = {
@@ -61,20 +61,30 @@ export function App() {
     <div className="app">
       <h1>Lista de Tarefas</h1>
       <Search search={search} setSearch={setSearch} />
-      <Filter filter = {filter} setFilter={setFilter} />
+      <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
       <div className="todo-list">
         {todos
-        .filter((todo) => 
-          filter === "all"
-         ? true 
-         : filter === "completed"
-         ? todo.isCompleted 
-         : !todo.isCompleted)
+          .filter((todo) =>
+            filter === "all"
+              ? true
+              : filter === "completed"
+                ? todo.isCompleted
+                : !todo.isCompleted)
 
-        .filter((todo)=>todo.text.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((todo) => (
-          <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo} />
+          .filter((todo) =>
+            todo.text.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+          )
+          .sort((a, b) =>
+            sort === "asc"
+              ? a.text.localeCompare(b.text)
+              : b.text.localeCompare(a.text)
+          )
+          .map((todo) => (
+            <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo} />
 
-        ))}
+          ))
+
+        }
       </div>
       <TodoForm addTodo={addTodo} />
     </div>
